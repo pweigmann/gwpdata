@@ -7,7 +7,7 @@
 Use this package for an easy and consistent use of Global Warming Potentials.
 
 The provided data was taken from https://github.com/openclimatedata/globalwarmingpotentials (17.02.2023).
-Please find additional information about data sources there or in the header of the [CSV file](https://github.com/pweigmann/gwpdata/data/globalwarmingpotentials.csv).
+Please find additional information about data sources there or in the header of the [CSV file](https://github.com/pweigmann/gwpdata/blob/main/data/globalwarmingpotentials.csv).
 
 
 ## Installation
