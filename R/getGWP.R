@@ -13,13 +13,14 @@ getGWP <- function(source = "AR6", metric = "GWP100", species = NULL) {
   sourcesMetrics <- c("SARGWP100", "AR4GWP100", "AR5GWP100", "AR5CCFGWP100",
                       "AR6GWP100", "AR6GWP20", "AR6GWP500", "AR6GTP100")
   sourceMetric <- paste0(source, metric)
+
   if (!sourceMetric %in% sourcesMetrics) {
     stop(cat("Not a valid choice. Please choose one of the following combinations:\n", sourcesMetrics, "\n"))
   }
 
-  filename <- "data/globalwarmingpotentials.csv"
-  data <- read.csv(filename, skip = 9, header = TRUE, na.strings = list("")) %>%
-    select("Species", sourceMetric)
+  filepath <- system.file("extdata", "globalwarmingpotentials.csv", package = "gwpdata")
+  data <- read.csv(filepath, skip = 9, header = TRUE, na.strings = list("")) %>%
+    select(c("Species", sourceMetric))
 
   # return a dataframe of GWPs if no species is specified, otherwise only a single value
   if (!is.null(species)) {

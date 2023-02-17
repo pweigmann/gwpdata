@@ -36,7 +36,7 @@ Available combinations are:
 Example
 ``` r
 library(gwpdata)
-df <- getGWP(source = "AR6", metric = "GWP100")  # returns a dataframe
+df  <- getGWP(source = "AR6", metric = "GWP100")  # returns a dataframe
 val <- getGWP(source = "AR6", metric = "GWP100", species = "CH4")  # returns a single value
 ```
 
